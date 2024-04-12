@@ -20,16 +20,22 @@ struct NewNoteView: View {
                 VStack {
                     TextField("Title", text: $title)
                         .padding()
-                        .border(Color.black)
-                        .padding(.horizontal)
                         .background(Color.gray.opacity(0.1))
+//                        .border(Color.black)
+                        .padding(.horizontal)
+                        .padding(.top)
+
                     TextEditor(text: $noteInput)
-                        RoundedRectangle(cornerRadius: 8)
-                            .foregroundColor(lightGray)
+                        .padding()
+                        .background(Color.gray.opacity(0.1))
+                        .foregroundColor(.black)
+//                        .border(Color.black)
+                        .padding(.horizontal)
+                        .padding(.bottom)
                 }
                 .navigationBarTitle("New Note")
-
             }
+            .background(Color.white)
         }
 }
 
